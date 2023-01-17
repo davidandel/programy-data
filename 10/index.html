@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="cs">
+    <head>
+        <title>Zálohování programů a dat</title>
+        <link rel="stylesheet" href="../css/style.css" />
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link href="../css/style.css" rel="stylesheet" />
+    
+        <div class="topnav">
+            <a href="../">Úvod</a>
+            <a href="/./programy-data/01/index.html">Programové a datové soubory</a>
+            <a href="/./programy-data/02/index.html">Operační systémy</a>
+            <a href="/./programy-data/03/index.html">Softwrová licence</a>
+            <a href="/./programy-data/04/index.html">Ovladače, firmware a utility</a>
+            <a href="/./programy-data/05/index.html">Aplikační software</a>
+            <a href="/./programy-data/06/index.html">Instalace programů</a>
+            <a href="/./programy-data/07/index.html">Software a autorský zákon</a>
+            <a href="/./programy-data/08/index.html">Emulace a virtualizace</a>
+            <a href="/./programy-data/09/index.html">Cloudová řešení</a>
+            <a class="active" href="/./programy-data/10/index.html">Zálohování programů a dat</a>
+            </div>
+    </head>
+<body id="bg">
+    <main>
+        <header>
+            <h1>Zálohování programů a dat</h1>
+        </header>
+        <h2>Zálohování programů a dat</h2>
+        <p>Záloha nebo záložní kopie (anglicky backup) je kopie dat uložená na
+            jiném datovém nosiči (nebo i místě). Záložní data jsou využívána v
+            případě ztráty, poškození nebo jiné potřeby práce s daty uloženými v
+            minulosti. Zálohování probíhá nepravidelně (např. v domácnostech),
+            nebo pravidelně podle rozvrhu (např. ve firmách). Používají se různé
+            strategie zálohování; volba správné strategie závisí na tom, zde je potřeba se zálohami pracovat velmi často, nebo je naopak požadována
+            maximální délka archivace zálohovaných dat. </p>
+        <h3>PROSTŘEDKY ZÁLOHOVÁNÍ</h3>
+        <ul>
+            <li>Specializovaný program (např. ve Windows je součástí instalace)</li><br>
+            <li>Specializovaná zařízení ((hardware), která pracují automatizovaně)</li><br>
+            <li>Komplexní zálohovací systémy (Komplexní zálohovací systémy umožňující efektivně zálohovat mnoho
+                počítačů propojených počítačovou sítí, nebo naopak na mnoho počítačů
+                propojených v síti data zálohovat (tzv. <b>úložný cluster</b>))</li><br>
+        </ul>
+        <h3>TYPY ZÁLOH</h3>
+        <p><b>Nestrukturovaná.</b> Úložištěm může být větší množství disket, CD, DVD medií
+        s minimem informací o záloze; nejjednodušší, ale nevhodná pro větší firmy.</p>
+        <p><b>Úplná + inkrementální.</b> Cílem je vytvořit více kopií zálohovaných dat; poprvé
+            je provedena úplná záloha všech dat; poté je prováděna tzv. inkrementální
+            záloha (tj. přírůstková, ukládány jsou pouze soubory, které se změnily od předešlé úplné nebo inkrementální zálohy); při obnově je nutné použít první úplnou i všechny následující inkrementální zálohy (náročné na paměťový prostor).</p>
+        <p><b>Úplná + rozdílová.</b> Rozdíl oproti předešlé metodě je v tom, že po úplné záloze
+            každá částečná záloha zachytí všechny soubory vytvořené nebo změněné od
+            vytvoření úplné zálohy, třebaže některé už jsou obsaženy v předešlé částečné
+            záloze; výhodou je, že obnova zahrnuje obnovení pouze poslední úplné zálohy
+            a její překrytí poslední rozdílovou zálohou.</p>
+        <p><b>Zrcadlová + rezervě přírůstková.</b> Tento model obsahuje zrcadlo reflektující
+            stav systému po poslední záloze a historii přírůstkových záloh; výhodou je, že
+            máme neustále k dispozici aktuální plnou zálohu a ukládáme pouze historii
+            změn; metoda se nehodí pro přenosná media, protože každá záloha musí být
+            provedena pomocí srovnání se zrcadlem.</p>
+        <p><b>Průběžná ochrana dat (žurnálování).</b> Metoda využívá místo plánovaných periodických záloh okamžitý zápis každé změny do žurnálu změn (logu); provádí
+            se ukládáním bytů nebo celých bloků dat místo ukládání celých změněných
+            souborů; průběžný záznam změn v žurnálu umožňuje získat obraz dat v minulosti; naproti tomu prosté zrcadlení dat na druhý disk (např. RAID 1) stav
+            v minulosti nezachycuje.</p>
+        <h3>ZÁSADY ZÁLOHOVÁNÍ</h3>
+        <ul>
+            <li>Postupy zálohování volíme v závislosti na konkrétní situaci (jak často dochází ke změně dat, jak jsou data cenná ...).</li><br>
+            <li>Provádíme kontrolu záloh – umožnuje většina programů (např. použití kontrolního součtu).</li><br>
+            <li>▫ Pečlivě popisujeme zálohy (co obsahují, datum vytvoření).</li><br>
+            <li>Pořizujeme zálohy z instalačních médií; originální média by měla být
+                ihned po pořízení kopií uložena na bezpečném místě (včetně instalačních hesel a čísel!), vlastní instalace probíhá z pořízených kopií.</li><br>
+            <li>Ukládáme zálohy na fyzicky různá místa – důležité zálohy by neměly
+                být uloženy u počítače (požár, krádež...).</li><br>
+            <li>Snažíme se zajistit důvěrnost dat (fyzicky, či aspoň zaheslováním
+                zálohy).</li><br>
+            <li>Volíme vhodná zálohovací média (CD, DVD, Flash…); médium volíme podle rychlosti zálohování (čtení), pořizovací a provozní ceny,
+                spolehlivosti média, spolehlivost obnovení, doby uchovávání dat,
+                kompatibility...</li><br>
+        <h2>MOŽNOSTI ZÁLOHOVÁNÍ</h2>
+        <p><b>Záloha adresářů a souborů.</b> Provádíme ji různými způsoby - prostým
+            kopírováním obsahu plánovanou synchronizací, zálohováním adresáře s komprimací obsahu. Pro běžnou zálohu můžeme použít řadu
+            archivačních programů - např. WinZip, WinRar, 7zip a jiné.</p>
+        <p><b>Záloha oddílu.</b> Záloha obsahu celého diskového oddílu včetně instalovaného operačního systému (pokud jej oddíl obsahuje), instalovaných
+            aplikací a veškerých dat; na rozdíl od souborové zálohy obsahuje také
+            zaváděcí záznam a skryté části operačního systému, takže při obnově
+            zálohy systémového oddílu je operační systém plně funkční a schopný
+            bootovat (za předpokladu, že byl funkční v době tvorby zálohy).</p>
+        <p><b>Záloha disku.</b> Záloha obsahu celého disku včetně rozdělení disku na
+            jednotlivé oddíly (např. Clonezilla).</p>
+        <p><b>Záloha systému.</b> Záloha funkčního stavu systému, která by umožňuje
+            obnovení systému do původní podoby; je možné použít buď program
+            nabízený samotným OS, nebo některý ze specializovaných programů
+            (Acronis).</p>
+        </ul>
+        </main>
+        <footer>
+            <hr />
+            <p align="center">&copy; 2022 - <i>Tomáš Řehulek </i> - <b>IT1</b></p>
+        </footer>
+    </body>
+</html>
